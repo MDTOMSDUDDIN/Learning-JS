@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> html dom document </title>
+</head>
+<body>
+    
+    <p></p>
+    <button onclick="myFun()">Click</button>
+
+    <script>
+        function myFun(){
+            let info=document.cookie;
+            document.getElementsByTagName('p')[0].innerHTML=info;
+        }
+    </script>
+</body>
+</html>

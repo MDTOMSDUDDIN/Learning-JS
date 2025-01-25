@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> title dom document </title>
+</head>
+<body>
+    
+    <p></p>
+    <button onclick="demo()">Click</button>
+
+    <script>
+        function demo(){
+            let info=document.title;
+            document.getElementsByTagName('p')[0].innerHTML=info;
+        }
+    </script>
+</body>
+</html>

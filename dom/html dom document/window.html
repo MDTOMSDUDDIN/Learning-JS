@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> open new window  </title>
+</head>
+<body>
+    
+    <p></p>
+    <button onclick="demo()">Click</button>
+
+    <script>
+        function demo(){
+            let  w=window.open();
+            w.document.open();
+            w.document.write('<h2>Open new window page </h2>')
+            w.document.close();
+        }
+    </script>
+</body>
+</html>
