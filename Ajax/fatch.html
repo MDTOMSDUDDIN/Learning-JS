@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api fatch</title>
+</head>
+<body>
+    <button onclick="ExcGetRequest()">ExcGetRequest</button>
+    
+    <script>
+        function ExcGetRequest(){
+            let  URL="https://crud.teamrabbil.com/api/v1/readProduct";
+            let Configuration={method:"GET"};
+
+            fetch(URL,Configuration)
+            .then(Response=>Response.json())
+            .then(result=>console.log(result))
+            .then(error=>console.log('error',error))
+        }
+    </script>
+    
+</body>
+</html>

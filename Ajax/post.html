@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post</title>
+</head>
+<body>
+    <button onclick="ExcGetRequest()">POst Request</button>
+    
+    <script>
+        function ExcGetRequest(){
+            let  URL="https://crud.teamrabbil.com/api/v1/CreateProduct";
+            let BodyData={name:"123"};
+            
+            let Configuration={
+                method:"GET",
+                Headers:{'Accept':'application/json','Content-Type':'application/json'},
+                body:JSON.stringify(BodyData)
+            };
+
+            fetch(URL,Configuration)
+            .then(Response=>Response.json())
+            .then(result=>console.log(result))
+            .then(error=>console.log('error',error))
+        }
+    </script>
+    
+</body>
+</html>
