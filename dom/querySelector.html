@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector js</title>
+</head>
+<body>
+     <h1 id="myId">h1</h1>
+     <h1 class="myClass">h6</h1>
+     <p name="myName">p</p>
+     <h4>4</h4>
+     <button onclick="Find()">Click</button>
+
+     <script>
+        function Find(){
+            document.querySelector('h4').innerHTML="h4 manupulator";
+            document.querySelector('.myClass').innerHTML="h6 manupulator";
+            document.querySelector('#myId').innerHTML="h1 manupulator";
+            document.querySelector('p[myId="myName"]').innerHTML="h4 manupulator";
+        }
+     </script>
+</body>
+</html>
