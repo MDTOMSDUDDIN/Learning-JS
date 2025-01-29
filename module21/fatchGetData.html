@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"> -->
+    <title>Fatch Get Data Ajax</title>
+</head>
+<body>
+    
+    <button onclick="fatchGet()"> Fatch Get Data Ajax</button>
+
+    <script>
+        function fatchGet(){
+            let url="https://crud.teamrabbil.com/api/v1/ReadProduct";
+            let configure={method:"GET"};
+
+            fetch(url,configure)
+            .then(Response=>Response.json())
+            .then(result=>console.log(result))
+            .then(err =>console.log(err))
+        }
+    </script>
+</body>
+</html>
