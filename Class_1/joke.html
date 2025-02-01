@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+    <title>joke api</title>
+</head>
+<body>
+    <h1>Wellcome to Your Website</h1>
+    <p>Here is a joke for you :</p>
+    <p id="Joke" > </p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            fetch('https://v2.jokeapi.dev/joke/programming?safe-mode')
+
+            .then(Response => Response.json())
+            .then(data => {
+                if(data.setup){
+                    document.getElementById('Joke').innerText=data.setup+" "+data.delivery;
+                    return;
+                }else{
+                    document.getElementById('Joke').innerText=data.Joke;
+                }
+                })
+            .catch(err => console.log(err))
+        });
+    </script>
+</body>
+</html>

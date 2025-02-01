@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+    <title>Ajax</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajax Gets</h1>
+    <button id="b1">Ajax Todos</button>
+    <script>
+        function getExternalData(){
+            let url="https://jsonplaceholder.typicode.com/posts/1";
+            config={method:'GET'}
+
+            fetch(url,config)
+            .then(Response=>Response.json())
+            .then(data=>console.log(data))
+            .catch(err=>console.log(err))
+        }
+        document.getElementById('b1').addEventListener('click',getExternalData);
+    </script>
+</body>
+</html>
