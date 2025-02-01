@@ -1,0 +1,66 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Do something",
+      "completed": true
+    },
+    {
+      "id": "2",
+      "title": "Do Api",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "title": "Do id no 5",
+      "completed": true
+    },
+    {
+      "id": "4",
+      "title": "Deploy your site ",
+      "completed": true
+    },
+    {
+      "id": "6",
+      "title": "tomas uddin",
+      "completed": true
+    }
+  ],
+  "countries": [
+    {
+      "id": "2",
+      "name": "India",
+      "population": "10 million"
+    },
+    {
+      "id": "3",
+      "name": "Napel",
+      "population": "4 million"
+    },
+    {
+      "id": "4",
+      "name": "america",
+      "population": "40 million"
+    },
+    {
+      "id": "35ad",
+      "name": "sirajgonj",
+      "population": "12 million"
+    },
+    {
+      "id": "e4e5",
+      "name": "sirajgonj",
+      "population": "12 million"
+    },
+    {
+      "id": "86fc",
+      "name": "sirajgonj",
+      "population": "12 million"
+    },
+    {
+      "id": "2bd1",
+      "name": "",
+      "population": ""
+    }
+  ]
+}

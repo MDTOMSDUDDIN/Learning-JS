@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+    <!-- <script src="//cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <title>Ajax</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTTPS Fetch </h1>
+    <label for="name">Name</label>
+    <input type="text" id="name"><br>
+
+    <label for="name">population</label>
+    <input type="text" id="population"><br>
+ 
+    <button id="b1">Add a new country</button><br>
+    <button id="b2">Delete a  country</button>
+    
+
+    <script>
+         async  function postData(){
+            const name=document.getElementById('name').value;
+            const population=document.getElementById('population').value;
+
+            const postDatas={
+                name:name,
+                population:population
+            }
+
+            const response =await fetch('http://localhost:3000/countries',{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify(postDatas)
+            })
+            const data=await response.json();
+            console.log(data);
+        }
+
+        function DeleteCountry(){
+            const countryId=prompt('Enter the country id to Delete');
+            fetch(`http://localhost:3000/countries/${countryId}`,{
+                method:'DELETE'
+            })
+            .then(response=>response.json())
+            .then(data=>console.log(data))
+
+            console.log('Country Deleted');
+        }
+        document.getElementById('b1').addEventListener('click',postData);
+        document.getElementById('b2').addEventListener('click',DeleteCountry);
+    </script>
+</body>
+</html>
